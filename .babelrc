@@ -3,7 +3,7 @@
     "react-native-stage-0"
     ],
   "plugins": [
-    ["babel-root-import", {
+    ["babel-plugin-root-import", {
     "rootPathSuffix": "app"
     }]
   ]
