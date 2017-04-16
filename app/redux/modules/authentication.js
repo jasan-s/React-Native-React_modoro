@@ -38,7 +38,7 @@ export function handleAuthWithFirebase () {
 export function onAuthChange (user) {
   return function (dispatch) {
     if (!user) {
-      dispatch(notAuthed())
+      // dispatch(notAuthed())
     } else {
       // update user in firebase database
       const { uid, displayName, photoURL } = user
@@ -52,8 +52,8 @@ export function onAuthChange (user) {
 }
 
 const initialState = {
-  isAuthed: false,
-  isAuthenticating: true,
+  isAuthed: true,
+  isAuthenticating: false,
   authedId: ''
 }
 
