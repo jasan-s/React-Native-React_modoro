@@ -5,15 +5,17 @@ import { Settings } from '~/components'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as ActionCreators from '~/redux/modules/authentication'
+import * as flashNotificationActionCreators from '~/redux/modules/flashNotification'
 
 class SettingsContainer extends Component {
   static propTypes = {
     navigator: PropTypes.object.isRequired,
-    handleUnAuth: PropTypes.func.isRequired
+    handleUnAuth: PropTypes.func.isRequired,
+    handleShowFlashNotification: PropTypes.func.isRequired
   }
   state = {
     timerDuration: 20,
-    restDuration: 5,
+    restDuration: 5
   }
   handleTimerChange = (timerDuration) => {
     this.setState({timerDuration})
@@ -23,9 +25,11 @@ class SettingsContainer extends Component {
   }
   handleTimerComplete = () => {
     console.log('Finished Sliding Timer')
+    this.props.handleShowFlashNotification({text: ' Timer Duration Saved!'})
   }
   handleRestComplete = () => {
     console.log('Finished Sliding Rest Timer')
+    this.props.handleShowFlashNotification({text: 'Rest Duration Saved!'})
   }
   handleLogout = () => {
     console.log('Logging Out!')
@@ -52,7 +56,7 @@ function mapStateToProps (state, props) {
 }
 
 function mapDispatchToProps (dispatch, props) {
-  return bindActionCreators(ActionCreators, dispatch)
+  return bindActionCreators({...ActionCreators, ...flashNotificationActionCreators}, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SettingsContainer)
