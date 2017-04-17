@@ -1,8 +1,9 @@
-import { getAccessToken, authWithToken, updateUser } from '~/api/auth'
+import { getAccessToken, authWithToken, updateUser, logOut } from '~/api/auth'
 
 const AUTHENTICATING = 'AUTHENTICATING'
 const NOT_AUTHED = 'NOT_AUTHED'
 const IS_AUTHED = 'IS_AUTHED'
+export const LOGGING_OUT = 'LOGGING_OUT' // so listen to it in index.js to reset entire redux store to intial state all in one go instead of resseting it at each reducer
 
 function authenticating () {
   return {
@@ -13,6 +14,12 @@ function authenticating () {
 function notAuthed () {
   return {
     type: NOT_AUTHED
+  }
+}
+
+function loggingOut () {
+  return {
+    type: LOGGING_OUT
   }
 }
 
@@ -48,6 +55,13 @@ export function onAuthChange (user) {
         photoURL
       }).then(() => dispatch(isAuthed(uid)))
     }
+  }
+}
+
+export function handleUnAuth () {
+  return function (dispatch) {
+    logOut()
+    dispatch(loggingOut())
   }
 }
 
