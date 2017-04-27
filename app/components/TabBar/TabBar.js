@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { View, StyleSheet, Text, ScrollView, TouchableOpacity } from 'react-native'
-import ScrollableTabView from 'react-native-scrollable-tab-view'
+import ScrollableTabView, { ScrollableTabBar } from 'react-native-scrollable-tab-view'
 
 export default function TabBar(props) {
   const { events, calendars } = props
@@ -43,16 +43,6 @@ export default function TabBar(props) {
               <Text>Messenger</Text>
             </View>
           </ScrollView>
-          <ScrollView tabLabel="ios-notifications" style={styles.tabView}>
-            <View style={styles.card}>
-              <Text>Notifications</Text>
-            </View>
-          </ScrollView>
-          <ScrollView tabLabel="ios-list" style={styles.tabView}>
-            <View style={styles.card}>
-              <Text>Other nav</Text>
-            </View>
-          </ScrollView>
         </ScrollableTabView>
   )
 }
@@ -71,7 +61,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderColor: 'rgba(0,0,0,0.1)',
     margin: 5,
-    height: 150,
+    height: 600,
     padding: 15,
     shadowColor: '#ccc',
     shadowOffset: { width: 2, height: 2, },

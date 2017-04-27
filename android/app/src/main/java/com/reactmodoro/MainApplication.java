@@ -1,6 +1,7 @@
 package com.reactmodoro;
 import com.oblador.vectoricons.VectorIconsPackage;
 import android.app.Application;
+import com.calendarevents.CalendarEventsPackage;
 
 import com.facebook.react.ReactApplication;
 import com.facebook.CallbackManager;
@@ -34,7 +35,8 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
             new FBSDKPackage(mCallbackManager),
-            new VectorIconsPackage()
+            new VectorIconsPackage(),
+            new CalendarEventsPackage()
       );
     }
   };
