@@ -40,6 +40,9 @@
 		910D8A441EA3FCCF00ABA995 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910D8A411EA3FCCF00ABA995 /* FBSDKCoreKit.framework */; };
 		910D8A451EA3FCCF00ABA995 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910D8A421EA3FCCF00ABA995 /* FBSDKLoginKit.framework */; };
 		910D8A461EA3FCCF00ABA995 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910D8A431EA3FCCF00ABA995 /* FBSDKShareKit.framework */; };
+		916894F31EB1717F00E1CAF2 /* libRNCalendarEvents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 916894F11EB1715000E1CAF2 /* libRNCalendarEvents.a */; };
+		916894F51EB172F600E1CAF2 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916894F41EB172F600E1CAF2 /* EventKit.framework */; };
+		916894F71EB174AD00E1CAF2 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916894F61EB174AD00E1CAF2 /* CoreFoundation.framework */; };
 		91E12A381EA403EB0031D190 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91E12A2E1EA403EB0031D190 /* Entypo.ttf */; };
 		91E12A391EA403EB0031D190 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91E12A2F1EA403EB0031D190 /* EvilIcons.ttf */; };
 		91E12A3A1EA403EB0031D190 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91E12A301EA403EB0031D190 /* FontAwesome.ttf */; };
@@ -250,6 +253,13 @@
 			remoteGlobalIDString = 9350E0F11CE3B0920041D815;
 			remoteInfo = RCTFBSDK;
 		};
+		916894F01EB1715000E1CAF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 916894D21EB1714F00E1CAF2 /* RNCalendarEvents.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEC43C6A1C723089001221C6;
+			remoteInfo = RNCalendarEvents;
+		};
 		91E12A601EA405290031D190 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 91E12A5C1EA405290031D190 /* RNVectorIcons.xcodeproj */;
@@ -289,6 +299,9 @@
 		910D8A411EA3FCCF00ABA995 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		910D8A421EA3FCCF00ABA995 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		910D8A431EA3FCCF00ABA995 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		916894D21EB1714F00E1CAF2 /* RNCalendarEvents.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCalendarEvents.xcodeproj; path = "../node_modules/react-native-calendar-events/RNCalendarEvents.xcodeproj"; sourceTree = "<group>"; };
+		916894F41EB172F600E1CAF2 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		916894F61EB174AD00E1CAF2 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		91E12A2E1EA403EB0031D190 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
 		91E12A2F1EA403EB0031D190 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
 		91E12A301EA403EB0031D190 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
@@ -315,6 +328,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				916894F71EB174AD00E1CAF2 /* CoreFoundation.framework in Frameworks */,
+				916894F51EB172F600E1CAF2 /* EventKit.framework in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				910D8A461EA3FCCF00ABA995 /* FBSDKShareKit.framework in Frameworks */,
@@ -331,6 +346,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				67BC79E976C24D60BDB85F91 /* libRCTFBSDK.a in Frameworks */,
 				91E12A621EA405850031D190 /* libRNVectorIcons.a in Frameworks */,
+				916894F31EB1717F00E1CAF2 /* libRNCalendarEvents.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +502,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				916894D21EB1714F00E1CAF2 /* RNCalendarEvents.xcodeproj */,
 				91E12A5C1EA405290031D190 /* RNVectorIcons.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
@@ -540,6 +557,8 @@
 		910D89F21EA3FA2200ABA995 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				916894F61EB174AD00E1CAF2 /* CoreFoundation.framework */,
+				916894F41EB172F600E1CAF2 /* EventKit.framework */,
 				910D8A411EA3FCCF00ABA995 /* FBSDKCoreKit.framework */,
 				910D8A421EA3FCCF00ABA995 /* FBSDKLoginKit.framework */,
 				910D8A431EA3FCCF00ABA995 /* FBSDKShareKit.framework */,
@@ -551,6 +570,14 @@
 			isa = PBXGroup;
 			children = (
 				910D8A2A1EA3FC5D00ABA995 /* libRCTFBSDK.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		916894D31EB1714F00E1CAF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				916894F11EB1715000E1CAF2 /* libRNCalendarEvents.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -742,6 +769,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = 916894D31EB1714F00E1CAF2 /* Products */;
+					ProjectRef = 916894D21EB1714F00E1CAF2 /* RNCalendarEvents.xcodeproj */;
 				},
 				{
 					ProductGroup = 91E12A5D1EA405290031D190 /* Products */;
@@ -939,6 +970,13 @@
 			fileType = archive.ar;
 			path = libRCTFBSDK.a;
 			remoteRef = 910D8A291EA3FC5D00ABA995 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		916894F11EB1715000E1CAF2 /* libRNCalendarEvents.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNCalendarEvents.a;
+			remoteRef = 916894F01EB1715000E1CAF2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		91E12A611EA405290031D190 /* libRNVectorIcons.a */ = {

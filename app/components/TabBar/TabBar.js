@@ -1,9 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { View, StyleSheet, Text, ScrollView } from 'react-native'
+import { View, StyleSheet, Text, ScrollView, TouchableOpacity } from 'react-native'
 import ScrollableTabView from 'react-native-scrollable-tab-view'
 
 export default function TabBar(props) {
+  const { events, calendars } = props
+  const numberOfCalendars = calendars.length
+  const renderCalendarsTitles = () => {
+    return calendars.map((Calendar) => {
+      return <View><Text key={Calendar.title}> Calender Title: {Calendar.title} Calender Source: {Calendar.source}</Text></View>
+    })
+  }
   return (
     <ScrollableTabView
           style={{marginTop: 20 }}
@@ -12,7 +19,18 @@ export default function TabBar(props) {
           >
           <ScrollView tabLabel="ios-paper" style={styles.tabView}>
             <View style={styles.card}>
-              <Text>News</Text>
+              <TouchableOpacity onPress={props.handleCalenderPermisson}><Text>News</Text></TouchableOpacity>
+              {events[0]
+                ? <View>
+                    <Text> Event: {events[0].title}</Text>
+                  <Text> Location: {events[0].location}</Text>
+                </View>
+                : null}
+              {calendars
+                ? <View>
+                  {renderCalendarsTitles()}
+                </View>
+                : null}
             </View>
           </ScrollView>
           <ScrollView tabLabel="ios-people" style={styles.tabView}>
