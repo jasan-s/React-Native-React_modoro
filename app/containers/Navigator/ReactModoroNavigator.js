@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Navigator, Platform } from 'react-native'
-import { SplashContainer, FooterTabsContainer, SettingsContainer, TabBarContainer } from '~/containers'
+import { SplashContainer, FooterTabsContainer, SettingsContainer, TabBarContainer, TabBarBContainer } from '~/containers'
 
 export default class ReactModoroNavigator extends Component {
   static propTypes = {
@@ -9,7 +9,7 @@ export default class ReactModoroNavigator extends Component {
   }
   renderScene = (route, navigator) => {
     if (this.props.isAuthed === false) {
-      return <TabBarContainer navigator={navigator} />
+      return <TabBarBContainer navigator={navigator} />
     } else if (route.settings === true) {
       return <SettingsContainer navigator={navigator} />
     } else {

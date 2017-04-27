@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { View, StyleSheet, Text, ScrollView, TouchableOpacity } from 'react-native'
 import ScrollableTabView, { ScrollableTabBar } from 'react-native-scrollable-tab-view'
+import { ListsContainer } from '~/containers'
 
 export default function TabBar(props) {
   const { events, calendars } = props
@@ -34,9 +35,7 @@ export default function TabBar(props) {
             </View>
           </ScrollView>
           <ScrollView tabLabel="ios-people" style={styles.tabView}>
-            <View style={styles.card}>
-              <Text>Friends</Text>
-            </View>
+          <ListsContainer />
           </ScrollView>
           <ScrollView tabLabel="ios-chatboxes" style={styles.tabView}>
             <View style={styles.card}>

@@ -17,6 +17,7 @@
 		"react-native-navbar": "^1.7.1",
 		"react-native-scrollable-tab-view": "^0.6.5",
 		"react-native-slider": "^0.9.1",
+		"react-native-tab-view": "^0.0.61",
 		"react-native-vector-icons": "^4.0.1",
 		"react-redux": "^5.0.4",
 		"redux": "^3.6.0",
