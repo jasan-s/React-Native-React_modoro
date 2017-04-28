@@ -1,18 +1,7 @@
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native';
-import { TabViewAnimated, TabBar } from 'react-native-tab-view';
+import { View, StyleSheet, Platform  } from 'react-native';
+import { TabViewAnimated, TabBar, TabViewPagerScroll, TabViewPagerPan } from 'react-native-tab-view';
 import Icon from 'react-native-vector-icons/Ionicons'
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  page: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 export default class TabBarBottom extends Component {
   state = {
@@ -24,14 +13,16 @@ export default class TabBarBottom extends Component {
   };
 
   handleChangeTab = (index) => {
+    console.log('Bottom TABBAR index: ', index)
     this.setState({ index });
   };
 
-  renderHeader = (props) => {
-    return <TabBar {...props} renderIcon={this.renderIcon}/>;
+  renderFooter = (props) => {
+    return <TabBar {...props} renderIcon={this.renderIcon} scrollEnabled={false}/>;
   };
 
   renderScene = ({ route }) => {
+    console.log('Bottom TABBAR key: ', route.key)
     switch (route.key) {
     case '1':
       return <View style={[ styles.page, { backgroundColor: '#96ceb4' } ]} />;
@@ -41,6 +32,10 @@ export default class TabBarBottom extends Component {
       return null;
     }
   };
+
+   renderPager = (props) => {
+   return (Platform.OS === 'ios') ? <TabViewPagerScroll {...props} /> : <TabViewPagerPan {...props} />
+  }
 
   renderIcon = ({ route }) => {
     return <Icon
@@ -55,11 +50,23 @@ export default class TabBarBottom extends Component {
         style={styles.container}
         navigationState={this.state}
         renderScene={this.renderScene}
-        renderFooter={this.renderHeader}
+        renderFooter={this.renderFooter}
         onRequestChangeTab={this.handleChangeTab}
         swipeEnabled ={false}
         animationEnabled ={false}
+        renderPager={this.renderPager}
       />
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  page: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

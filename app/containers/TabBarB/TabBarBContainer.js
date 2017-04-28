@@ -17,6 +17,7 @@ export default class TabViewExample extends Component {
   };
 
   handleChangeTab = (index) => {
+    console.log('Top TABBAR index: ', index)
     this.setState({ index });
   };
 
@@ -25,6 +26,7 @@ export default class TabViewExample extends Component {
   };
 
   renderScene = ({ route }) => {
+    console.log('Top TABBAR key: ', route.key)
     switch (route.key) {
     case '1':
       return <TabBarBottom />
