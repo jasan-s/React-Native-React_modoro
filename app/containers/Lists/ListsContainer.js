@@ -3,6 +3,8 @@ import { View, Image, StyleSheet, ScrollView, ListView, Text } from 'react-nativ
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import list1 from './Lists.json'
 import { CardSection } from '~/components'
+import UserAvatar from 'react-native-user-avatar'
+
 const list2 = [
   {
     name: 'Amy Farha',
@@ -57,9 +59,16 @@ class More extends Component {
   renderRow = (l, i) => {
     return (
           <CardSection key={l.name}>
+          <View>
             <Text>
               {l.name}
             </Text>
+          <UserAvatar
+          size='100'
+          name= {l.name}
+          src={l.avatar_url}
+          colors={['#ccc', '#fafafa', '#ccaabb']}/>
+            </View>
           </CardSection>
     )
   }
