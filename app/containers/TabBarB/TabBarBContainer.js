@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Dimensions } from 'react-native';
 import { TabViewAnimated, TabBar } from 'react-native-tab-view';
 import { ListsContainer } from '~/containers'
 import TabBarBottom from './TabBarBottom'
 import Icon from 'react-native-vector-icons/Ionicons'
 
+const initialLayout = {
+  height: 0,
+  width: Dimensions.get('window').width,
+}
 
 export default class TabViewExample extends Component {
   state = {
@@ -17,7 +21,6 @@ export default class TabViewExample extends Component {
   };
 
   handleChangeTab = (index) => {
-    console.log('Top TABBAR index: ', index)
     this.setState({ index });
   };
 
@@ -26,7 +29,6 @@ export default class TabViewExample extends Component {
   };
 
   renderScene = ({ route }) => {
-    console.log('Top TABBAR key: ', route.key)
     switch (route.key) {
     case '1':
       return <TabBarBottom />
@@ -62,6 +64,7 @@ export default class TabViewExample extends Component {
         renderScene={this.renderScene}
         renderHeader={this.renderHeader}
         onRequestChangeTab={this.handleChangeTab}
+        initialLayout={initialLayout}
       />
     );
   }

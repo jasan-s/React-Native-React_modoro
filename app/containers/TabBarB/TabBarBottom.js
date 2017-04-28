@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Platform  } from 'react-native';
+import { View, StyleSheet, Platform, Dimensions  } from 'react-native';
 import { TabViewAnimated, TabBar, TabViewPagerScroll, TabViewPagerPan } from 'react-native-tab-view';
 import Icon from 'react-native-vector-icons/Ionicons'
+
+const initialLayout = {
+  height: 0,
+  width: Dimensions.get('window').width,
+}
+
 
 export default class TabBarBottom extends Component {
   state = {
@@ -13,7 +19,6 @@ export default class TabBarBottom extends Component {
   };
 
   handleChangeTab = (index) => {
-    console.log('Bottom TABBAR index: ', index)
     this.setState({ index });
   };
 
@@ -22,7 +27,6 @@ export default class TabBarBottom extends Component {
   };
 
   renderScene = ({ route }) => {
-    console.log('Bottom TABBAR key: ', route.key)
     switch (route.key) {
     case '1':
       return <View style={[ styles.page, { backgroundColor: '#96ceb4' } ]} />;
@@ -55,6 +59,7 @@ export default class TabBarBottom extends Component {
         swipeEnabled ={false}
         animationEnabled ={false}
         renderPager={this.renderPager}
+        initialLayout={initialLayout}
       />
     );
   }
