@@ -3745,6 +3745,10 @@ react-native-fbsdk@^0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/react-native-fbsdk/-/react-native-fbsdk-0.5.0.tgz#3ccd67d189755df11d366b8de9acb91ea2300e6e"
 
+react-native-interactable@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/react-native-interactable/-/react-native-interactable-0.0.8.tgz#f4a175daccded50aa7edc67fb65f64e325eec70c"
+
 react-native-navbar@^1.7.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/react-native-navbar/-/react-native-navbar-1.7.1.tgz#de0e6f8c2156c7e984bb43c76732bd2437b7df0f"
@@ -3762,9 +3766,9 @@ react-native-slider@^0.9.1:
     react-addons-shallow-compare "^15.0.2"
     style-equal "^1.0.0"
 
-"react-native-tab-view@https://github.com/react-native-community/react-native-tab-view.git":
+"react-native-tab-view@https://github.com/react-native-community/react-native-tab-view":
   version "0.0.61"
-  resolved "https://github.com/react-native-community/react-native-tab-view.git#10701365df2912c9a5c6d9dbd6a4969e6670c4e3"
+  resolved "https://github.com/react-native-community/react-native-tab-view#92632ed9605f90a4b2bc68c60b51ce3d9421cd55"
   dependencies:
     prop-types "^15.5.8"
 

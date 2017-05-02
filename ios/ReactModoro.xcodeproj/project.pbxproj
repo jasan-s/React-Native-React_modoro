@@ -43,6 +43,7 @@
 		916894F31EB1717F00E1CAF2 /* libRNCalendarEvents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 916894F11EB1715000E1CAF2 /* libRNCalendarEvents.a */; };
 		916894F51EB172F600E1CAF2 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916894F41EB172F600E1CAF2 /* EventKit.framework */; };
 		916894F71EB174AD00E1CAF2 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916894F61EB174AD00E1CAF2 /* CoreFoundation.framework */; };
+		9184C7FA1EB34BBB00692039 /* libInteractable.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9184C7F91EB34BAC00692039 /* libInteractable.a */; };
 		91E12A381EA403EB0031D190 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91E12A2E1EA403EB0031D190 /* Entypo.ttf */; };
 		91E12A391EA403EB0031D190 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91E12A2F1EA403EB0031D190 /* EvilIcons.ttf */; };
 		91E12A3A1EA403EB0031D190 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91E12A301EA403EB0031D190 /* FontAwesome.ttf */; };
@@ -260,6 +261,13 @@
 			remoteGlobalIDString = BEC43C6A1C723089001221C6;
 			remoteInfo = RNCalendarEvents;
 		};
+		9184C7F81EB34BAC00692039 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9184C7F41EB34BAC00692039 /* Interactable.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CC0127971E3ACC3900B23C9F;
+			remoteInfo = Interactable;
+		};
 		91E12A601EA405290031D190 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 91E12A5C1EA405290031D190 /* RNVectorIcons.xcodeproj */;
@@ -302,6 +310,7 @@
 		916894D21EB1714F00E1CAF2 /* RNCalendarEvents.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCalendarEvents.xcodeproj; path = "../node_modules/react-native-calendar-events/RNCalendarEvents.xcodeproj"; sourceTree = "<group>"; };
 		916894F41EB172F600E1CAF2 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		916894F61EB174AD00E1CAF2 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		9184C7F41EB34BAC00692039 /* Interactable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Interactable.xcodeproj; path = "../node_modules/react-native-interactable/ios/Interactable.xcodeproj"; sourceTree = "<group>"; };
 		91E12A2E1EA403EB0031D190 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
 		91E12A2F1EA403EB0031D190 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
 		91E12A301EA403EB0031D190 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
@@ -347,6 +356,7 @@
 				67BC79E976C24D60BDB85F91 /* libRCTFBSDK.a in Frameworks */,
 				91E12A621EA405850031D190 /* libRNVectorIcons.a in Frameworks */,
 				916894F31EB1717F00E1CAF2 /* libRNCalendarEvents.a in Frameworks */,
+				9184C7FA1EB34BBB00692039 /* libInteractable.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +512,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				9184C7F41EB34BAC00692039 /* Interactable.xcodeproj */,
 				916894D21EB1714F00E1CAF2 /* RNCalendarEvents.xcodeproj */,
 				91E12A5C1EA405290031D190 /* RNVectorIcons.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
@@ -578,6 +589,14 @@
 			isa = PBXGroup;
 			children = (
 				916894F11EB1715000E1CAF2 /* libRNCalendarEvents.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9184C7F51EB34BAC00692039 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9184C7F91EB34BAC00692039 /* libInteractable.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -722,6 +741,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 9184C7F51EB34BAC00692039 /* Products */;
+					ProjectRef = 9184C7F41EB34BAC00692039 /* Interactable.xcodeproj */;
+				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -977,6 +1000,13 @@
 			fileType = archive.ar;
 			path = libRNCalendarEvents.a;
 			remoteRef = 916894F01EB1715000E1CAF2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9184C7F91EB34BAC00692039 /* libInteractable.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libInteractable.a;
+			remoteRef = 9184C7F81EB34BAC00692039 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		91E12A611EA405290031D190 /* libRNVectorIcons.a */ = {

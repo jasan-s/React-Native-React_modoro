@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Platform, Dimensions  } from 'react-native';
 import { TabViewAnimated, TabBar, TabViewPagerScroll, TabViewPagerPan } from 'react-native-tab-view';
 import Icon from 'react-native-vector-icons/Ionicons'
+import { InteractableContainer } from '~/containers'
 
 const initialLayout = {
   height: 0,
@@ -29,7 +30,7 @@ export default class TabBarBottom extends Component {
   renderScene = ({ route }) => {
     switch (route.key) {
     case '1':
-      return <View style={[ styles.page, { backgroundColor: '#96ceb4' } ]} />;
+      return <InteractableContainer />
     case '2':
       return <View style={[ styles.page, { backgroundColor: '#ff6f69' } ]} />;
     default:
